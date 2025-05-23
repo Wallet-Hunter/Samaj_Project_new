@@ -1,0 +1,298 @@
+/* Global reset and base styles */
+.head-profile-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d1117; /* Deep navy */
+  color: silver;
+  padding: 2rem;
+  width: 100%;
+  min-height: 100%;
+
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00bcd4; /* Light blue */
+  border-left: 4px solid #00bcd4;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-content: center;
+}
+
+/* Header Section */
+.profile-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1f2a48, #0d1117);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(192, 192, 192, 0.2);
+  margin-bottom: 2rem;
+}
+
+.profile-header-left h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: silver;
+  display: flex;
+  align-items: center;
+}
+
+.head-badge {
+  background-color: rgb(8, 7, 7);
+  color: rgb(9, 244, 56);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  margin-left: 0.75rem;
+  text-transform: uppercase;
+}
+
+.family-id {
+  font-size: 0.9rem;
+  color: lightgray;
+  margin-top: 0.3rem;
+}
+
+/* Buttons */
+.profile-header-right {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: flex-start; /* Align buttons to the start */
+  gap: 1rem; /* Spacing between buttons */
+  margin-left: auto; /* Push this section to the right if inside a flex container */
+}
+
+/* Button base styles */
+.profile-header-right button {
+  background: linear-gradient(to right, #1f2a48, #000080);
+  color: silver;
+  border: 1px solid #888;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%; /* Full width buttons */
+  max-width: 200px; /* Optional max width */
+}
+
+/* Hover effects */
+.profile-header-right button:hover {
+  background-color: silver;
+  color: #f2f2f5 !important;
+  border-color: silver;
+  transform: scale(1.05);
+}
+
+
+.remaining-members-label {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #f9f7f7;
+}
+
+/* Sections */
+.info-section {
+  background-color: #1f2a48;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(192, 192, 192, 0.15);
+  transition: background 0.3s ease-in-out;
+}
+
+.info-section h4 {
+  border-bottom: 1px solid silver;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: larger;
+  color: #fff;
+}
+
+.info-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.info-section li {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: lightgray;
+}
+
+/* Family Members */
+.family-members {
+  margin-top: 3rem;
+}
+
+.family-members h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: silver;
+}
+
+.family-member-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.family-member-card {
+  background-color: #2d3557;
+  border: 1px solid silver;
+  color: silver;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 180px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(192, 192, 192, 0.1);
+}
+
+.family-member-card:hover {
+  transform: scale(1.05);
+  background-color: #3a405f;
+}
+
+.member-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.member-relation {
+  font-size: 0.85rem;
+  color: lightgray;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-header-right {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .profile-header-right button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .family-member-card {
+    width: 100%;
+  }
+
+  .family-member-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .family-member-card {
+    width: 45%;
+  }
+}
+
+/* Scrollbar Customization */
+.head-profile-container::-webkit-scrollbar {
+  width: 8px;
+}
+.head-profile-container::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+.head-profile-container::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 10px;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+  border-bottom: 2px solid #888;
+  padding-bottom: 0.3rem;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.info-table th,
+.info-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-table th {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #cccccc;
+  font-weight: 600;
+  width: 220px;
+}
+
+.info-table td {
+  color: #e0e0e0;
+}
+
+.info-table tr:hover td {
+  background-color: rgba(0, 188, 212, 0.1);
+}
+
+
+@media (max-width: 600px) {
+  .info-table th,
+  .info-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .info-table th {
+    background: none;
+    color: #aaa;
+    font-weight: bold;
+    padding-top: 1rem;
+  }
+
+  .info-table td {
+    padding: 0.4rem 1rem;
+  }
+
+  .info-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+
+
+

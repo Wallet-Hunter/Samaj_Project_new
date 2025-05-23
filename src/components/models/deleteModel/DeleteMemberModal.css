@@ -1,0 +1,106 @@
+/* Overlay for the modal */
+.delete-member-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .delete-member-modal-content {
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px);  /* Glassmorphism effect */
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; /* Limit the width on larger screens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    border: 2px solid #2F4F4F;  /* Darker gray border */
+  }
+  
+  /* Header Styling */
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .modal-header h3 {
+    font-size: 1.5em;
+    color: #C0C0C0;  /* Silver color */
+  }
+  
+  .close-button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #C0C0C0;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    color: silver;
+  }
+  
+  /* Member list */
+  .member-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .member-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    color: #C0C0C0; /* Silver text color */
+  }
+  
+  .member-item span {
+    font-size: 1.1em;
+  }
+  
+  .delete-icon {
+    cursor: pointer;
+    color: #ADD8E6;  /* Light Blue */
+    font-size: 1.5em;
+  }
+  
+  .delete-icon:hover {
+    color: red;  /* Navy Blue on hover */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .delete-member-modal-content {
+      width: 95%;  /* Full width on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .delete-member-modal-content {
+      width: 100%;
+      padding: 15px;
+    }
+    .modal-header h3 {
+      font-size: 1.3em;
+    }
+    .member-item span {
+      font-size: 1em;
+    }
+  }
+  

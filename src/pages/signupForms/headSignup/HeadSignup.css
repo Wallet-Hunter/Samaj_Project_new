@@ -1,0 +1,65 @@
+.head-signup-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.head-signup-form fieldset {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.head-signup-form legend {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0 12px;
+  color: #333;
+}
+
+.head-signup-form input,
+.head-signup-form select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.head-signup-form input:focus,
+.head-signup-form select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+.head-signup-form button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.head-signup-form button:hover,
+.head-signup-form button:focus {
+  background-color: #0056b3;
+}
+
+.required-asterisk {
+  color: red;
+  margin-left: 4px;
+  font-weight: 700;
+}

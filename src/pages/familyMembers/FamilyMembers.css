@@ -1,0 +1,93 @@
+.family-members {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  background-color:  #0D1117;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.family-members h3 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: silver;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.family-member-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding-bottom: 2rem;
+}
+
+
+
+.family-member-card {
+  background-color: #2d3557;
+  border: 1px solid silver;
+  color: silver;
+  border-radius: 12px;
+  padding: 1.2rem;
+  width: 100%;
+  max-width: 240px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(192, 192, 192, 0.15);
+}
+
+.family-member-card:hover {
+  transform: scale(1.05);
+  background-color: #3a405f;
+  box-shadow: 0 0 15px rgba(173, 216, 230, 0.4);
+}
+
+.member-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #e0e0e0;
+}
+
+.member-relation {
+  font-size: 0.9rem;
+  color: lightgray;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .family-members {
+    padding: 1rem;
+  }
+
+  .family-members h3 {
+    font-size: 1.7rem;
+  }
+
+  .family-member-card {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .member-name {
+    font-size: 1rem;
+  }
+
+  .member-relation {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .family-member-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .family-members h3 {
+    font-size: 1.5rem;
+  }
+}

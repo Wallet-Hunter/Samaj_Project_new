@@ -1,0 +1,205 @@
+/* Overlay background */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.add-member-form {
+  background: rgba(10, 25, 47, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 15px;
+  width: 60%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow-y: auto;
+  max-height: 90vh;
+  position: relative;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-section {
+  margin-bottom: 16px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #ADD8E6;
+  font-size: 0.85rem;
+}
+
+.form-section input {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+  font-size: 0.85rem;
+}
+
+h2 {
+  text-align: center;
+  color: #f2f2f8;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.submit-button {
+  padding: 8px 16px;
+  background-color: #000080;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.95rem;
+}
+
+.submit-button:hover {
+  background-color: #8b93ee;
+}
+
+.submit-button:active {
+  background-color: #303f9f;
+}
+
+.submit-button:disabled {
+  background-color: #B0B0B0;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-member-form {
+    width: 85%;
+    padding: 12px;
+  }
+
+  .form-section input {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Minimalistic Capsule Button */
+.use-head-address-btn {
+  background-color: transparent; /* No background */
+  color: #4CAF50; /* Green text */
+  padding: 8px 20px; /* Small padding for a minimal look */
+  font-size: 14px; /* Slightly smaller font */
+  border: 2px solid #4CAF50; /* Green border to match text */
+  border-radius: 50px; /* Capsule shape */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  width: auto; /* Adjust width to fit text */
+  margin-top: 10px; /* Space between fields and the button */
+}
+
+.use-head-address-btn:hover {
+  background-color: #4CAF50; /* Green background on hover */
+  color: white; /* White text when hovered */
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+.use-head-address-btn:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+.use-head-address-btn:active {
+  background-color: #388e3c; /* Darker green when pressed */
+  color: white; /* White text when active */
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .popup-overlay {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .form-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-section input {
+    width: 90%;
+    text-align: center;
+  }
+
+  .add-member-form {
+    width: 85%;
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-overlay {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-section input {
+    width: 90%;
+    text-align: center;
+  }
+
+  .add-member-form {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .submit-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

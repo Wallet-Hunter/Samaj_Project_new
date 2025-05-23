@@ -1,0 +1,125 @@
+/* Full page setup */
+.signup-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../../assets/background3.avif') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 0;
+}
+
+/* Semi-transparent background layer for contrast */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+/* Glassmorphic card */
+.glass-card {
+  z-index: 2;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  text-align: center;
+}
+
+/* Input and button styling */
+.glass-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.glass-card input::placeholder {
+  color: #eee;
+}
+
+.glass-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #00c6ff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.glass-card button:hover {
+  background: #0072ff;
+}
+
+/* Button group for role selection */
+.button-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.button-group button {
+  flex: 1;
+}
+
+/* Label styling */
+.glass-card label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #ffffffcc; /* Soft white with opacity for glass effect */
+}
+
+/* Select dropdown styling */
+.glass-card select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  outline: none;
+  margin-bottom: 20px;
+  appearance: none; /* Remove native dropdown arrow */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+}
+
+/* On focus */
+.glass-card select:focus {
+  box-shadow: 0 0 0 2px rgba(173, 216, 230, 0.4);
+}
+
+/* Option styling */
+.glass-card select option {
+  background-color: #1e1e1e; /* Darker backdrop for options */
+  color: #fff;
+}

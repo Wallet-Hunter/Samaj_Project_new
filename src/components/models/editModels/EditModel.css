@@ -1,0 +1,148 @@
+/* Overlay for modal background */
+.edit-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 15, 30, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 12px; /* small padding for mobile edges */
+}
+
+/* Modal box */
+.edit-modal {
+  background: linear-gradient(135deg, #1a1a2e, #2e2e3a);
+  color: silver;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 95vh;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(192, 192, 192, 0.4);
+  padding: 16px;
+  animation: popup 0.3s ease-out;
+}
+
+/* Popup animation */
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding-bottom: 8px;
+}
+
+.modal-header h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: silver;
+}
+
+.close-button {
+  background: none;
+  font-size: 1.4rem;
+  color: silver;
+  border: none;
+  cursor: pointer;
+}
+
+/* Form Grid */
+.modal-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Input group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: lightgray;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.form-group input {
+  padding: 6px 10px;
+  background-color: #3a3a4f;
+  color: white;
+  border: 1px solid #888;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.form-group input::placeholder {
+  color: #ccc;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.save-button,
+.cancel-button {
+  border: none;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.save-button {
+  background-color: navy;
+  color: white;
+}
+
+.cancel-button {
+  background-color: gray;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #001f4d;
+}
+
+.cancel-button:hover {
+  background-color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .edit-modal {
+    padding: 14px;
+    max-width: 95%;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+}
